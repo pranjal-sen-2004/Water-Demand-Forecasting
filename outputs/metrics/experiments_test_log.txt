@@ -1,0 +1,69 @@
+[Parallel(n_jobs=12)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=12)]: Done   3 out of   3 | elapsed:  4.1min finished
+{
+ "selection_rule": "lowest validation MAE over the listed grid; test used once",
+ "protocol": "rolling day-ahead: origin 00:00 daily, horizon 24 h, 288 test days (6912 forecasts)",
+ "SARIMA": {
+  "order": [
+   3,
+   0,
+   1
+  ],
+  "seasonal_order": [
+   0,
+   1,
+   1,
+   24
+  ],
+  "est_weeks": 4,
+  "test_estimation_window": [
+   "2020-05-21 00:00:00",
+   "2020-06-17 23:00:00"
+  ],
+  "test_fit_aic": 9144.617817944734,
+  "test_fit_convergence_warnings": [],
+  "params": {
+   "ar.L1": 1.9934817525877406,
+   "ar.L2": -1.3526200672438469,
+   "ar.L3": 0.3564474263091213,
+   "ma.L1": -0.9410328501255038,
+   "ma.S.L24": -0.8502499744820098,
+   "sigma2": 72844.99775960825
+  },
+  "validation_MAE": 280.85109945884284
+ },
+ "MSTL-ARIMA": {
+  "periods": [
+   24,
+   168
+  ],
+  "window_weeks": 12,
+  "arima_order": [
+   1,
+   1,
+   1
+  ],
+  "trend": "n",
+  "seasonal_extension": "repeat last cycle of each component",
+  "validation_MAE": 205.69106753372964,
+  "test_arima_fallbacks": 0
+ },
+ "MSTL-24 only (ablation)": {
+  "periods": [
+   24
+  ],
+  "window_weeks": 12,
+  "arima_order": [
+   1,
+   1,
+   1
+  ],
+  "trend": "n",
+  "test_arima_fallbacks": 0
+ }
+}
+SARIMA {'MAE': 270.68, 'RMSE': 381.92, 'MAPE': 15.87, 'WAPE': 10.66}
+MSTL-ARIMA {'MAE': 199.14, 'RMSE': 277.73, 'MAPE': 11.18, 'WAPE': 7.84}
+MSTL-24 only {'MAE': 288.75, 'RMSE': 406.86, 'MAPE': 16.83, 'WAPE': 11.37}
+Seasonal naive (24h) {'MAE': 285.63, 'RMSE': 426.85, 'MAPE': 15.88, 'WAPE': 11.25}
+Seasonal naive (168h) {'MAE': 283.37, 'RMSE': 408.14, 'MAPE': 14.74, 'WAPE': 11.16}

@@ -1,0 +1,13 @@
+variant,feature,data_type,description,unit,missing,missing_pct,unique,min,max
+raw,Date,string (M/D/YYYY),Calendar date,-,0,0.0,1918,,
+raw,Time,string (HH:MM-HH:MM),Hourly interval,-,0,0.0,26,,
+raw,Consumption,float,Water volume delivered in the hour,m^3 per hour,509,1.106,4523,1.0,6514.0
+raw,Temperature,float,Local air temperature,deg C,0,0.0,528,-17.6,40.3
+raw,Rain,float,Local precipitation,arbitrary units,25,0.054,18,0.0,22.0
+raw,Sun,float,Local sunshine intensity,arbitrary units,0,0.0,15,0,20
+noNaN_fixedTimechange,Date,string (M/D/YYYY),Calendar date,-,0,0.0,1918,,
+noNaN_fixedTimechange,Time,string (HH:MM-HH:MM),Hourly interval,-,0,0.0,24,,
+noNaN_fixedTimechange,Consumption,float,Water volume delivered in the hour,m^3 per hour,0,0.0,4505,1,6514
+noNaN_fixedTimechange,Temperature,float,Local air temperature,deg C,0,0.0,528,-17.6,40.3
+noNaN_fixedTimechange,Rain,float,Local precipitation,arbitrary units,25,0.054,18,0.0,22.0
+noNaN_fixedTimechange,Sun,float,Local sunshine intensity,arbitrary units,0,0.0,15,0,20
